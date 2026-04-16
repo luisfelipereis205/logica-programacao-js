@@ -91,8 +91,10 @@ input[type="submit"]:hover {
 
 
 #btnUrgencia {
-  background: #EB5757;
+  background: #ee2f2f;
   color: white;
+  padding: 10px 12px;
+  border-radius: 6px;
 }
 
 #btnUrgencia:hover {
@@ -103,6 +105,8 @@ input[type="submit"]:hover {
 #btnAtender {
   background: #27AE60;
   color: white;
+  padding: 10px 12px;
+  border-radius: 6px;
 }
 
 #btnAtender:hover {
