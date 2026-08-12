@@ -8,4 +8,3 @@ frm.addEventListener("submit", (e) => {
   resp.innerText = `Olá ${nome}`; // exibe a resposta do programa
   e.preventDefault(); // evita o envio do form
 });
-
