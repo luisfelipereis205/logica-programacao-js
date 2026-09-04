@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: linear-gradient(135deg, #07111f, #102a43);
+
+    color: #ffffff;
+}
+
+/* Título */
+
+h1 {
+    margin-bottom: 30px;
+
+    font-size: 2.4rem;
+    text-align: center;
+
+    color: #4db8ff;
+
+    text-shadow: 0 0 15px rgba(77, 184, 255, 0.3);
+}
+
+/* Formulário */
+
+form {
+    width: 400px;
+
+    padding: 30px;
+
+    background: #172536;
+
+    border: 1px solid #29445f;
+    border-radius: 16px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Textos */
+
+form p {
+    margin-bottom: 20px;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    color: #dce6ef;
+}
+
+/* Inputs */
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+
+    margin-top: 8px;
+    padding: 13px;
+
+    background: #0c1826;
+
+    border: 2px solid #29445f;
+    border-radius: 8px;
+
+    color: #ffffff;
+
+    font-size: 1rem;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+/* Input selecionado */
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #4db8ff;
+
+    box-shadow: 0 0 10px rgba(77, 184, 255, 0.25);
+}
+
+/* Botão */
+
+input[type="submit"] {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: linear-gradient(135deg, #1687d9, #35a9f5);
+
+    color: #ffffff;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* Hover */
+
+input[type="submit"]:hover {
+    transform: translateY(-2px);
+
+    background: linear-gradient(135deg, #35a9f5, #1687d9);
+
+    box-shadow: 0 6px 20px rgba(53, 169, 245, 0.3);
+}
+
+/* Resultados */
+
+h3 {
+    width: 400px;
+
+    margin-top: 12px;
+    padding: 14px 18px;
+
+    background: #172536;
+
+    border-left: 4px solid #4db8ff;
+    border-radius: 8px;
+
+    color: #dce6ef;
+
+    font-size: 1.1rem;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Nome do veículo */
+
+.resposta1 {
+    margin-top: 25px;
+
+    color: #4db8ff;
+
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* Valores */
+
+.resposta2,
+.resposta3 {
+    color: #ffffff;
+}
+
+/* Responsividade */
+
+@media (max-width: 450px) {
+    form,
+    h3 {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 1.9rem;
+    }
+
+    form {
+        padding: 25px;
+    }
+}
