@@ -1,32 +1,94 @@
-<!--Criar uma página que faz a leitura do nome e das notas do alunos, apresenta a média e uma mensagem para o aluno: "Parabéns (nome do aluno) você foi aprovado(a)!" ou então "Ops (nome do aluno) Você foi reprovado(a)"--> 
+<!--Criar uma página que faz a leitura do nome e das notas do alunos, apresenta a média e uma mensagem para o aluno: "Parabéns (nome do aluno) você foi aprovado(a)!" ou então "Ops (nome do aluno) Você foi reprovado(a)"-->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Nota</title>
+    <link rel="stylesheet" href="css/ex4_1.css">
+    <title>Sistema de Notas</title>
 </head>
 <body>
-    <h1>Programa situação do Aluno</h1>
+    <h1>Programa Situação do Aluno</h1>
     <form>
         <p>
-            Nome do Aluno: 
-            <input type="text" id="inName" required>
+            Nome do Aluno:
+            <input
+                type="text"
+                id="inName"
+                required
+            >
         </p>
 
         <p>
-            1º Nota: 
-            <input type="number" id="inNota1" step="0.1" min="0" max="10"  required>
+            1ª Nota:
+            <input
+                type="number"
+                id="inNota1"
+                step="0.1"
+                min="0"
+                max="10"
+                required
+            >
         </p>
 
         <p>
-            2º Nota:
-            <input type="number" id="inNota2" step="0.1" min="0" max="10" required>
+            2ª Nota:
+            <input
+                type="number"
+                id="inNota2"
+                step="0.1"
+                min="0"
+                max="10"
+                required
+            >
         </p>
 
-        <input type="submit" value="Exibir Média e Situação">
+        <p>
+            3ª Nota:
+            <input
+                type="number"
+                id="inNota3"
+                step="0.1"
+                min="0"
+                max="10"
+                required
+            >
+        </p>
+
+        <p>
+            4ª Nota:
+            <input
+                type="number"
+                id="inNota4"
+                step="0.1"
+                min="0"
+                max="10"
+                required
+            >
+        </p>
+
+        <p>
+            Nota de Recuperação:
+            <input
+                type="number"
+                id="inRecuperacao"
+                step="0.1"
+                min="0"
+                max="10"
+            >
+        </p>
+
+        <input
+            type="submit"
+            value="Calcular Resultado"
+        >
+
     </form>
+
+    <h2 id="outAluno"></h2>
     <h2 id="outMedia"></h2>
+    <h2 id="outRecuperacao"></h2>
+    <h2 id="outMediaFinal"></h2>
     <h2 id="outSituacao"></h2>
 
     <script src="js/ex4_1.js"></script>

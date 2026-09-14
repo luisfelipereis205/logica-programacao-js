@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #f4f6f9;
+    --surface: #ffffff;
+    --surface-hover: #f8fafc;
+    --primary: #1e3a5f;
+    --primary-dark: #142b46;
+    --primary-light: #e8f0f8;
+    --text: #172033;
+    --text-secondary: #667085;
+    --border: #e4e7ec;
+    --success: #12b76a;
+    --danger: #f04438;
+    --warning: #f79009;
+    --radius: 12px;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial,
+        sans-serif;
+    background: var(--background);
+    color: var(--text);
+    padding: 50px 20px;
+}
+
+
+body::before {
+    content: "SISTEMA ACADÊMICO";
+    display: block;
+    width: min(100%, 920px);
+    margin: 0 auto 12px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--text-secondary);
+}
+
+
+h1 {
+    width: min(100%, 920px);
+    margin: 0 auto 30px;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+
+form {
+    width: min(100%, 920px);
+    margin: 0 auto;
+    padding: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 8px 24px rgba(16, 24, 40, 0.06);
+}
+
+
+form p {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Nome ocupa toda a largura */
+
+form p:first-child {
+    grid-column: 1 / -1;
+}
+
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    height: 46px;
+    padding: 0 14px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    background: #ffffff;
+    color: var(--text);
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+input[type="text"]:hover,
+input[type="number"]:hover {
+    border-color: #98a2b3;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #1e3a5f;
+
+    box-shadow:
+        0 0 0 3px rgba(30, 58, 95, 0.10);
+
+    background: #ffffff;
+}
+
+/* =========================
+   BOTÃO
+========================= */
+
+input[type="submit"] {
+    grid-column: 1 / -1;
+
+    height: 48px;
+
+    margin-top: 6px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background: var(--primary-dark);
+    box-shadow: 0 4px 12px rgba(20, 43, 70, 0.18);
+    transform: translateY(-1px);
+}
+
+input[type="submit"]:active {
+    transform: translateY(0);
+}
+
+
+h2 {
+    background: var(--surface);
+    color: var(--text);
+    width: min(100%, 920px);
+    margin: 12px auto 0;
+    padding: 18px 22px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow:
+        0 1px 2px rgba(16, 24, 40, 0.03);
+}
+
+#outAluno {
+    margin-top: 30px;
+
+    background: var(--primary);
+
+    border-color: var(--primary);
+
+    color: #ffffff;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#outMedia {
+    color: var(--primary);
+
+    font-weight: 600;
+}
+
+#outRecuperacao {
+    color: var(--text-secondary);
+}
+
+
+#outMediaFinal {
+    color: var(--text);
+
+    font-weight: 700;
+}
+
+#outSituacao {
+    margin-top: 18px;
+
+    padding: 22px;
+
+    border-left: 4px solid var(--primary);
+
+    font-size: 20px;
+    font-weight: 700;
+
+    background: var(--surface);
+}
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 30px 15px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+
+        padding: 24px;
+    }
+
+    form p:first-child {
+        grid-column: auto;
+    }
+
+    input[type="submit"] {
+        grid-column: auto;
+    }
+
+    h2 {
+        font-size: 15px;
+    }
+
+    #outSituacao {
+        font-size: 18px;
+    }
+}
